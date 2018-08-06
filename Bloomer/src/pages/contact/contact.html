@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+  <ion-title>
+  Modo Automático
+  </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header align=center >Escoge entre regular temperatura y vibración</ion-list-header>
+    <ion-item>
+      <ion-icon color="danger" name="thermometer" item-start></ion-icon>
+      Temperatura
+    </ion-item>
+
+    <ion-item>
+      <button ion-button color="danger" large (click)="Bajo()">Bajo</button>
+      <button ion-button color="danger" large (click)="Medio()">Medio</button>
+      <button ion-button color="danger" large (click)="Alto()">Alto</button>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button color="danger" outline round block (click)="Detener()">Detener</button>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon color="default" name="ios-analytics-outline" item-start></ion-icon>
+      Vibración
+    </ion-item>
+
+    <ion-item>
+      <button ion-button large (click)="Bajo1()">Bajo</button>
+      <button ion-button large (click)="Medio1()">Medio</button>
+      <button ion-button large (click)="Alto1()">Alto</button>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button outline round block (click)="Detener1()">Detener</button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

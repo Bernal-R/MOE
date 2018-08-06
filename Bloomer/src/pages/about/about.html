@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+  <ion-title>
+  Modo Manual
+  </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-list-header align=center>
+      Elegir opción
+    </ion-list-header>
+    <a ion-item (click)="openModal({charNum: 0})">
+      Vibración y Temperatura
+    </a>
+<img src="assets/img/mano.jpg"/>
+  </ion-list>
+
+  <ion-card>
+    <ion-card-header align=center>
+    Guía: Modo Manual
+  </ion-card-header>
+    <ion-card-content>
+      El símbolo de termómetro representa la temperatura y la onda representa las vibraciónes.
+      Tú controlas manualmente ambas funciones pulsando inicialmente "Vibración y Temperatura".
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

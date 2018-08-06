@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+        </button>
+  <ion-title>
+  MOE
+  </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div *ngIf="!isConnected">
+    <button ion-button block large icon-left color="primary" (click)="startScanning()">
+      <ion-icon name="bluetooth"></ion-icon>
+      SCAN
+    </button>
+  <br>
+
+    <ion-list>
+      <button ion-item *ngFor="let device of devices" (click)="connectToDevice(device)">
+        {{device.name}}
+      </button>
+      <ion-spinner *ngIf="isScanning==true" name="circles" text-center></ion-spinner>
+    </ion-list>
+  </div>
+  <div *ngIf="isConnected">
+
+    <ion-card-content>
+
+      <ion-item>
+           <ion-icon name='md-checkmark-circle-outline' item-start style="color: #23B3E8"></ion-icon>
+           Conectado
+      </ion-item>
+
+
+      <ion-item>
+<button ion-button clear icon-start color="dark" (click)="disconnect()">
+  <ion-icon name='ios-close-circle-outline' item-start style="color: #23B3E8" is-active="false"></ion-icon>
+  Desconectar
+</button>
+</ion-item>
+
+
+
+
+
+
+    </ion-card-content>
+
+  </div>
+
+</ion-content>
