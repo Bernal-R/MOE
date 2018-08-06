@@ -21,32 +21,32 @@ export class AboutPage {
 
 @Component({
   template: `
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Modo Automático
-    </ion-title>
-    <ion-buttons start>
-      <button ion-button (click)="dismiss()">
-        <span ion-text color="primary" showWhen="ios">Cancel</span>
-        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
+  <ion-header>
+    <ion-toolbar color=secondary>
+      <ion-title>
+        Modo Manual
+      </ion-title>
+      <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+          <span ion-text color="primary" showWhen="ios">Cancel</span>
+          <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
 
-<ion-range min="0" max="255" step="10" snaps="true" [(ngModel)]="Tem" color="danger" (ngModelChange)="Temperatura($event)">
-<ion-icon range-left small color="danger" name="thermometer"></ion-icon>
-<ion-icon range-right color="danger" name="thermometer"></ion-icon>
-</ion-range>
+  <ion-range min="0" max="255" step="10" snaps="true" [(ngModel)]="Tem" color="danger" (ngModelChange)="Temperatura($event)">
+  <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+  <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+  </ion-range>
 
-<ion-range min="0" max="255" step="10" snaps="true" [(ngModel)]="Vib" color="default" (ngModelChange)="Vibracion($event)">
-<ion-icon range-left small color="default" name="ios-analytics-outline"></ion-icon>
-<ion-icon range-right color="default" name="ios-analytics-outline"></ion-icon>
-</ion-range>
+  <ion-range min="0" max="255" step="10" snaps="true" [(ngModel)]="Vib" color="default" (ngModelChange)="Vibracion($event)">
+  <ion-icon range-left small color="default" name="ios-analytics-outline"></ion-icon>
+  <ion-icon range-right color="default" name="ios-analytics-outline"></ion-icon>
+  </ion-range>
 
-</ion-content>
+  </ion-content>
 `
 })
 export class ModalContentPage {
